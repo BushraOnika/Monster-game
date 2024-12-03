@@ -9,7 +9,7 @@ public class Damage : MonoBehaviour
         var health = other.gameObject.GetComponent<Health>();
         if (health != null)
         {
-            health.value -= damgeValue;
+            health.Value -= damgeValue;
         }
     }
 }

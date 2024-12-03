@@ -9,7 +9,7 @@ public class LeaserLight : MonoBehaviour
         var health = other.gameObject.GetComponent<Health>();
         if (health != null)
         {
-            health.value -= damage;
+            health.Value -= damage;
         }
     }
 }
