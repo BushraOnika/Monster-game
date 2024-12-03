@@ -1,10 +1,11 @@
-using System;
 using UnityEngine;
 
 public class Owch : MonoBehaviour
 {
     public GameObject text;
     public int angry;
+    public Phone phone;
+    public bool friendCalled;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -26,9 +27,11 @@ public class Owch : MonoBehaviour
 
     private void Update()
     {
+        if (friendCalled) return;
         if (angry > 100)
         {
-            Debug.Log("You are dead!");
+            phone.CallFriend();
+            friendCalled = true;
         }
     }
 
