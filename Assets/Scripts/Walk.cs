@@ -1,45 +1,36 @@
-using System;
 using UnityEngine;
 
 public class Walk : MonoBehaviour
 {
     public float keyinput;
     public Rigidbody2D rb2D;
-
-    public void Awake()
-    {
-        Debug.Log("I am awake");
-    }
+    public Animator animator;
 
     private void Reset()
     {
         rb2D = GetComponent<Rigidbody2D>();
-    }
-
-    private void OnEnable()
-    {
-        Debug.Log("hi");
-    }
-
-    private void Start()
-    {
-        Debug.Log("I am only going to say this once");
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         keyinput = Input.GetAxis("Horizontal");
-        // transform.position += new Vector3(keyinput, 0, 0);
+
+        if (0 < keyinput)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+            animator.Play("walk");
+        }
+        else if (keyinput < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+            animator.Play("walk");
+        }
+        else
+        {
+            animator.Play("idle");
+        }
+
         rb2D.linearVelocity = new Vector3(keyinput, rb2D.linearVelocity.y, 0);
-    }
-
-    private void OnDisable()
-    {
-        Debug.Log("bye");
-    }
-
-    private void OnDestroy()
-    {
-        Debug.Log("I am dead");
     }
 }
