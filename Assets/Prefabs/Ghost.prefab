@@ -9,9 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2226255489060092372}
+  - component: {fileID: 1236139019764429812}
+  - component: {fileID: 6194513359774868922}
   - component: {fileID: 2848026672648243734}
   - component: {fileID: 4210447558640346910}
   - component: {fileID: 4754791652170245420}
+  - component: {fileID: 139124905984038855}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -34,6 +37,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1236139019764429812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3425724930108250572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5a6687c784fd38ca15248835049cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  moveSpeed: 0.2
+  rb2D: {fileID: 4210447558640346910}
+--- !u!114 &6194513359774868922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3425724930108250572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b790b72016034331b974194f0d3278f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 2
+  spriteRenderer: {fileID: 2848026672648243734}
+  whiteColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
+  flashDuration: 0.1
+  flash: 0
+  flashTime: 0
 --- !u!212 &2848026672648243734
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -75,8 +112,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1004360391
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 2192450021786810173, guid: 431afb4823b544646ad9e76701d14aae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -153,3 +190,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.8, y: 1.93}
   m_Direction: 0
+--- !u!114 &139124905984038855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3425724930108250572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0868bdb3382944eea0afd17c3bba6c9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damgeValue: 1
