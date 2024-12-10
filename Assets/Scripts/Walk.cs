@@ -7,7 +7,7 @@ public class Walk : MonoBehaviour
     public Rigidbody2D rb2D;
     public float jumpForce = 60 * 9.8f;
     public Animator animator;
-    private bool isGrounded;
+    public bool isGrounded;
     private string Ground_tag = "Ground";
 
     private void Reset()
