@@ -5,6 +5,7 @@ public class Walk : MonoBehaviour
 {
     public float keyinput;
     public Rigidbody2D rb2D;
+    public float jumpForce = 60 * 9.8f;
     public Animator animator;
     private bool isGrounded;
     private string Ground_tag = "Ground";
@@ -35,8 +36,6 @@ public class Walk : MonoBehaviour
         }
 
         rb2D.linearVelocity = new Vector3(keyinput, rb2D.linearVelocity.y, 0);
-
-        
     }
 
     private void FixedUpdate()
@@ -49,8 +48,7 @@ public class Walk : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             isGrounded = false;
-            rb2D.AddForce(new Vector2(0f,10f),ForceMode2D.Impulse);
-            
+            rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
     }
 
