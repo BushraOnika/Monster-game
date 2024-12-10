@@ -6,7 +6,7 @@ public class Walk : MonoBehaviour
     public float keyinput;
     public Rigidbody2D rb2D;
     public Animator animator;
-    private bool isGrounded;
+    public bool isGrounded;
     private string Ground_tag = "Ground";
 
     private void Reset()
