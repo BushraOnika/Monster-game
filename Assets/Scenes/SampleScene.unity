@@ -1385,7 +1385,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000d3e582d5a1aa6820
+  m_ApplyToSortingLayers: 00000000d3e582d5a1aa6820c752dd3b
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2149,9 +2149,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1236139019764429812, guid: de5f72d879eb8af4e84a53b0b48cf14a, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1480333091}
     - target: {fileID: 2226255489060092372, guid: de5f72d879eb8af4e84a53b0b48cf14a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.506136
+      value: -7.74
       objectReference: {fileID: 0}
     - target: {fileID: 2226255489060092372, guid: de5f72d879eb8af4e84a53b0b48cf14a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2196,79 +2200,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3425724930108250572, guid: de5f72d879eb8af4e84a53b0b48cf14a, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 1160251210}
-    - targetCorrespondingSourceObject: {fileID: 3425724930108250572, guid: de5f72d879eb8af4e84a53b0b48cf14a, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1160251211}
-    - targetCorrespondingSourceObject: {fileID: 3425724930108250572, guid: de5f72d879eb8af4e84a53b0b48cf14a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1160251205}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de5f72d879eb8af4e84a53b0b48cf14a, type: 3}
---- !u!1 &1160251204 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3425724930108250572, guid: de5f72d879eb8af4e84a53b0b48cf14a, type: 3}
-  m_PrefabInstance: {fileID: 1160251203}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1160251205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160251204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0868bdb3382944eea0afd17c3bba6c9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damgeValue: 1
---- !u!50 &1160251207 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 4210447558640346910, guid: de5f72d879eb8af4e84a53b0b48cf14a, type: 3}
-  m_PrefabInstance: {fileID: 1160251203}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1160251210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160251204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eee5a6687c784fd38ca15248835049cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1480333091}
-  moveSpeed: 0.2
-  rb2D: {fileID: 1160251207}
---- !u!114 &1160251211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160251204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b790b72016034331b974194f0d3278f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 2
-  spriteRenderer: {fileID: 1160251213}
-  whiteColor: {r: 1, g: 1, b: 1, a: 1}
-  flashColor: {r: 1, g: 0, b: 0, a: 1}
-  flashDuration: 0.1
-  flash: 0
-  flashTime: 0
---- !u!212 &1160251213 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 2848026672648243734, guid: de5f72d879eb8af4e84a53b0b48cf14a, type: 3}
-  m_PrefabInstance: {fileID: 1160251203}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1199406875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3696,6 +3629,14 @@ PrefabInstance:
     - target: {fileID: 1077385765151066776, guid: 7680918f87494fc489a2827c4cb36779, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727488085351151381, guid: 7680918f87494fc489a2827c4cb36779, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727488085351151381, guid: 7680918f87494fc489a2827c4cb36779, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1004360391
       objectReference: {fileID: 0}
     - target: {fileID: 5862487524482233331, guid: 7680918f87494fc489a2827c4cb36779, type: 3}
       propertyPath: m_Name
