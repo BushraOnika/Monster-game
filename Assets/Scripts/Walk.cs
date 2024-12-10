@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Walk : MonoBehaviour
@@ -5,6 +6,8 @@ public class Walk : MonoBehaviour
     public float keyinput;
     public Rigidbody2D rb2D;
     public Animator animator;
+    private bool isGrounded;
+    private string Ground_tag = "Ground";
 
     private void Reset()
     {
@@ -32,5 +35,30 @@ public class Walk : MonoBehaviour
         }
 
         rb2D.linearVelocity = new Vector3(keyinput, rb2D.linearVelocity.y, 0);
+
+        
+    }
+
+    private void FixedUpdate()
+    {
+        PlayerJump();
+    }
+
+    void PlayerJump()
+    {
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            isGrounded = false;
+            rb2D.AddForce(new Vector2(0f,10f),ForceMode2D.Impulse);
+            
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag(Ground_tag))
+        {
+            isGrounded = true;
+        }
     }
 }
