@@ -8,7 +8,7 @@ public class Gun : MonoBehaviour
     
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             var difference= playerTransform.position - transform.position;
             Debug.Log(difference.x);
